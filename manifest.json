@@ -1,0 +1,25 @@
+{
+  "name": "search",
+  "display_name": "Web Search (SearXNG & Public)",
+  "version": "1.0.0",
+  "description": "Configurable Web Search & Content Reader MCP Tool for Styx Agent OS",
+  "container_name": "styx-search-connector",
+  "port": 8766,
+  "protocol": "search",
+  "instructions_file": "instructions.md",
+  "has_docker": true,
+  "tools": [
+    {
+      "name": "web_search",
+      "description": "Execute a live web search query to retrieve relevant websites, news, and technical references",
+      "risk_level": "LOW",
+      "policy": "AUTONOMOUS"
+    },
+    {
+      "name": "read_web_page",
+      "description": "Fetch a webpage URL and extract clean readable text and markdown content",
+      "risk_level": "LOW",
+      "policy": "AUTONOMOUS"
+    }
+  ]
+}
