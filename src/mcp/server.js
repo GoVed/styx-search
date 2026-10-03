@@ -30,7 +30,7 @@ export async function handleMcpRequest(rpcRequest) {
           tools: { listChanged: false }
         },
         serverInfo: {
-          name: 'styx-search',
+          name: 'syndae-search',
           version: '1.0.0'
         }
       }

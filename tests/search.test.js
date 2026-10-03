@@ -5,7 +5,7 @@ import { handleMcpRequest } from '../src/mcp/server.js';
 import { startHttpServer } from '../src/mcp/http.js';
 import config from '../src/config.js';
 
-console.log('=== RUNNING COMPLETE STYX WEB SEARCH TEST SUITE ===\n');
+console.log('=== RUNNING COMPLETE SYNDAE WEB SEARCH TEST SUITE ===\n');
 
 // 1. Web Search Execution
 console.log('Testing Web Search execution...');
@@ -44,7 +44,7 @@ const initRes = await handleMcpRequest({
   params: { protocolVersion: '2024-11-05' }
 });
 assert.equal(initRes.result.protocolVersion, '2024-11-05');
-assert.equal(initRes.result.serverInfo.name, 'styx-search');
+assert.equal(initRes.result.serverInfo.name, 'syndae-search');
 console.log('✓ MCP initialize handshake verified');
 
 // 3b. Tools List
@@ -90,7 +90,7 @@ try {
   // 4b. Status
   const statusRes = await fetch(`http://127.0.0.1:${testPort}/status`);
   const statusData = await statusRes.json();
-  assert.equal(statusData.service, 'styx-search');
+  assert.equal(statusData.service, 'syndae-search');
   assert.equal(statusData.status, 'ready');
   console.log('✓ GET /status verified');
 
@@ -100,7 +100,7 @@ try {
   assert.equal(instData.success, true);
   assert.equal(instData.name, 'search');
   assert.ok(instData.instructions.includes('web_search'));
-  console.log('✓ GET /instructions verified for Styx discovery');
+  console.log('✓ GET /instructions verified for Syndae discovery');
 
   // 4d. POST /mcp over HTTP
   const mcpHttpRes = await fetch(`http://127.0.0.1:${testPort}/mcp`, {

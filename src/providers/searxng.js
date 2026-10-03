@@ -27,7 +27,7 @@ export async function searchSearxng(baseUrl, query, options = {}) {
     const response = await fetch(url.toString(), {
       headers: {
         'Accept': 'application/json',
-        'User-Agent': 'Styx-Agent-OS/1.0 (Web Search Tool)'
+        'User-Agent': 'Syndae-Agent-OS/1.0 (Web Search Tool)'
       },
       signal: controller.signal
     });

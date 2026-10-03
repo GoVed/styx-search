@@ -7,8 +7,8 @@ import config from './config.js';
 const program = new Command();
 
 program
-  .name('styx-search')
-  .description('Styx Web Search & Content Reader MCP Tool')
+  .name('syndae-search')
+  .description('Syndae Web Search & Content Reader MCP Tool')
   .version('1.0.0');
 
 program

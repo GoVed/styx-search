@@ -1,25 +1,25 @@
 {
-  "name": "@styx-tools/search",
+  "name": "@syndae-tools/search",
   "version": "1.0.0",
-  "description": "Configurable Web Search & Content Reader MCP Tool for Styx Agent OS",
+  "description": "Configurable Web Search & Content Reader MCP Tool for Syndae Agent OS",
   "type": "module",
   "main": "src/index.js",
   "bin": {
-    "styx-search": "./bin/styx-search"
+    "syndae-search": "./bin/syndae-search"
   },
   "scripts": {
     "start": "node src/index.js daemon",
     "test": "node tests/search.test.js"
   },
   "keywords": [
-    "styx",
+    "syndae",
     "web-search",
     "searxng",
     "mcp",
     "model-context-protocol",
     "agent-os"
   ],
-  "author": "Styx Community",
+  "author": "Syndae Community",
   "license": "MIT",
   "dependencies": {
     "commander": "^13.1.0",

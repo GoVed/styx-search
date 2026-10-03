@@ -27,7 +27,7 @@ export function startHttpServer() {
   app.get('/health', (req, res) => {
     res.json({
       status: 'healthy',
-      service: 'styx-search',
+      service: 'syndae-search',
       uptime: process.uptime()
     });
   });
@@ -35,7 +35,7 @@ export function startHttpServer() {
   // 2. Status & Configuration
   app.get('/status', (req, res) => {
     res.json({
-      service: 'styx-search',
+      service: 'syndae-search',
       provider: config.provider,
       searxng_url: config.searxngUrl,
       port: config.port,
@@ -43,7 +43,7 @@ export function startHttpServer() {
     });
   });
 
-  // 3. Instructions endpoint for Styx discovery & auto-ingestion
+  // 3. Instructions endpoint for Syndae discovery & auto-ingestion
   app.get('/instructions', (req, res) => {
     try {
       if (fs.existsSync(config.instructionsPath)) {
@@ -109,7 +109,7 @@ export function startHttpServer() {
   });
 
   const server = app.listen(config.port, config.host, () => {
-    logger.info({ port: config.port, host: config.host, provider: config.provider }, 'Styx Web Search MCP HTTP Server listening');
+    logger.info({ port: config.port, host: config.host, provider: config.provider }, 'Syndae Web Search MCP HTTP Server listening');
   });
 
   return server;

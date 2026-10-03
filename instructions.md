@@ -1,7 +1,7 @@
 # Skillset: Web Search & Internet Retrieval Integration
 
 ## 1. Tool Overview & Architecture
-The Web Search tool is a privacy-first, configurable search and web ingestion micro-daemon running alongside the Styx Agent OS. It bridges standard Model Context Protocol (MCP 2024-11-05) to privacy-respecting search engines (SearXNG instances, DuckDuckGo, or custom aggregators).
+The Web Search tool is a privacy-first, configurable search and web ingestion micro-daemon running alongside the Syndae Agent OS. It bridges standard Model Context Protocol (MCP 2024-11-05) to privacy-respecting search engines (SearXNG instances, DuckDuckGo, or custom aggregators).
 
 ### Core Capabilities:
 - **`web_search`**: Queries search engines for relevant real-time web results, documentation, and articles.
@@ -34,7 +34,7 @@ The Web Search tool is a privacy-first, configurable search and web ingestion mi
 
 ---
 
-## 3. Styx Agent Integration Directives
+## 3. Syndae Agent Integration Directives
 
 ### 1. Verification & Accuracy
 When responding to user requests regarding live facts, software versions, current weather, financial data, or external references:
